@@ -1,1 +1,15 @@
-<h1>New Post</h1>
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "author", "User Name" %>
+    <%= form.text_field "author" %>
+  </p>
+  <p>
+    <%= form.label "body", "Comments" %>
+    <%= form.text_field "body" %>
+  </p>
+  <p>
+    <%= form.label "url", "URL" %>
+    <%= form.text_field "url" %>
+  </p>
+  <%= form.submit %>
+<% end %>
